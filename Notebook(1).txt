@@ -1,0 +1,11 @@
+Using Phyton we can deploy our project in 2 ways:
+1. Web Site - Flask or FastAPI
+2. Application - Streamlit or Gradio
+
+-----> Flask, Python
+
+Flask ----> app.py, templates (html), Static (CSS, image).
+
+
+
+------> !!! Please don't create AWS account.
