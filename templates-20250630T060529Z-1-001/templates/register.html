@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="{{ url_for('static', filename='favicon.ico') }}" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Register</h2>
+        <form method="POST" action="{{ url_for('register') }}" class="mx-auto" style="max-width: 400px;">
+            <div class="mb-3">
+                <label for="role" class="form-label">Select Role</label>
+                <select class="form-select" id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">Trader</option>
+                </select>
+            </div>
+            <div class="from-group mb-3">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Enter your username" required>
+            </div>
+            <div class="from-group mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="from-group mb-3">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a href="{{url_for('login')}}">Login here</a></p>
+    </div>
+</body>
+
+</html>
